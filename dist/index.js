@@ -15,7 +15,7 @@ const port = process.env.PORT || 5000;
 app.use(express_1.default.static(path_1.default.join(__dirname, "client/build")));
 // app.use(express.static(path.join(__dirname + "public")))
 app.use((0, cors_1.default)({
-    origin: 'http://localhost:3000',
+    origin: "*",
     credentials: true,
     methods: ['GET'],
     allowedHeaders: ['Content-Type']

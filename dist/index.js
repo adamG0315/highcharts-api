@@ -21,9 +21,6 @@ app.use((0, cors_1.default)({
     allowedHeaders: ['Content-Type']
 }));
 app.use('/', stockRoutes);
-app.get("*", (req, res) => {
-    res.sendFile(path_1.default.resolve(__dirname, "public", "index.html"));
-});
 exports.server = app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
 });

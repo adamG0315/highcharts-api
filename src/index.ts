@@ -24,10 +24,6 @@ app.use(cors({
 
 app.use('/', stockRoutes)
 
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname,  "public", "index.html"));
-});
-
 export const server = app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
